@@ -54,7 +54,7 @@ function render(){
  <nav class="mobile-nav" aria-label="Navigazione mobile">${nav.filter(([v])=>['learn','sounds','practice','quests','stats'].includes(v)).map(([v,i,t])=>`<button data-view="${v}" aria-label="${t}" class="${view===v?'active':''}">${i==='profile'?'<span class="profile-avatar">G</span>':asset(i)}</button>`).join('')}</nav>`;
  app.querySelector('.brand').onclick=e=>{e.preventDefault();view='learn';render();};
  app.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{view=b.dataset.view;render();window.scrollTo({top:0,behavior:'smooth'});});
- const trigger=app.querySelector('.course-trigger'),menu=app.querySelector('#course-menu');trigger.onclick=()=>{menu.hidden=!menu.hidden;trigger.setAttribute('aria-expanded',String(!menu.hidden));};
+ const trigger=app.querySelector('.course-trigger'),menu=app.querySelector('#course-menu');trigger.onclick=()=>{menu.hidden=!menu.hidden;trigger.setAttribute('aria-expanded',String(!menu.hidden));if(!menu.hidden)positionCourseMenu();};
  app.querySelectorAll('[data-course]').forEach(b=>b.onclick=()=>{state.course=b.dataset.course;state.chapter=Math.max(0,next());save();render();});
  app.querySelectorAll('[data-lesson]').forEach(b=>b.onclick=()=>{const i=Number(b.dataset.lesson);if(b.dataset.practice==='true')startLesson(i,true);else startLearning(i);});
  app.querySelector('#goal-setting').onclick=()=>{state.goal=({20:30,30:40,40:60,60:20})[state.goal]||30;save();render();notify(`Obiettivo aggiornato: ${state.goal} XP al giorno`);};
@@ -63,6 +63,16 @@ function render(){
 
  app.querySelector('#export-progress')?.addEventListener('click',()=>{const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='lingo-progressi.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);});
 }
+function positionCourseMenu(){
+ const menu=app.querySelector('#course-menu'),trigger=app.querySelector('.course-trigger');if(!menu||menu.hidden||!trigger)return;
+ const rect=trigger.getBoundingClientRect(),v=window.visualViewport,left=v?.offsetLeft||0,top=v?.offsetTop||0,width=v?.width||window.innerWidth,height=v?.height||window.innerHeight,menuWidth=Math.min(256,width-24);
+ menu.style.left=`${Math.max(left+12,Math.min(rect.left,left+width-menuWidth-12))}px`;
+ menu.style.top=`${Math.max(top+8,Math.min(rect.bottom+8,top+height-128))}px`;
+ menu.style.width=`${menuWidth}px`;
+}
+window.addEventListener('resize',positionCourseMenu);
+window.visualViewport?.addEventListener('resize',positionCourseMenu);
+window.visualViewport?.addEventListener('scroll',positionCourseMenu);
 function pathView(chapterOverride,preview=false){
  const c=courses[state.course],chapter=Math.min(c.lessons.length-1,chapterOverride??state.chapter??0),l=c.lessons[chapter],nodes=pathNodes(state.course,chapter);
  const current=preview?-1:nodes.findIndex((type,j)=>nodeProgress(state.course,chapter,j)<nodeLength(type,j,state.course,chapter));

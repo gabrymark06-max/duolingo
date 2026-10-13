@@ -94,3 +94,6 @@ Preservare fondo #131f24, font arrotondato, azzurro inglese e verde acqua scacch
 
 ## Telefono senza scroll della schermata principale
 Riferimento: screenshot iPhone fornito, menu fuori bordo e verifica nascosta dalla barra inferiore. Schermata Impara vincolata a 100dvh con safe area, header 54px e navigazione 64px. Tappe in fila, gruppi di massimo tre per i capitoli estesi; controlli di paginazione espliciti. Obiettivo, progresso, prossima unità e tutti i capitoli sempre presenti. Menu corsi scuro entro la larghezza del viewport. Popup sopra i controlli, senza dipendere dalla posizione dei nodi. Le guide e i testi estesi restano leggibili e scorribili; non comprimere tutto il catalogo in una schermata. Nessuna modifica ai progressi.
+
+## Correzione menu iPhone
+Screenshot con voce selezionata chiara e menu tagliato. Fissare i colori del menu senza dipendere dalle media query e posizionarlo rispetto al viewport visibile, con margini minimi. Ricalcolare alla variazione del visualViewport, anche in caso di zoom. Controllare 390 e 320 px, apertura e cambio corso. Conservare lo zoom accessibile e i progressi.

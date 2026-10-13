@@ -120,3 +120,10 @@ html{scrollbar-gutter:stable}.premium-path{max-width:none;width:100%}.path-frien
  #app[data-screen="learn"] .chapter-end h2{font-size:14px;line-height:18px}
  #app[data-screen="learn"] .next-unit-kicker{display:none}
 }
+/* Colori e limiti del menu valgono anche fuori dal breakpoint mobile. */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+#course-menu.course-menu{position:fixed;left:16px;right:auto;top:64px;width:256px;max-width:calc(100vw - 24px);background:#202f36;color:#f1f7fb;border:2px solid #425b68;border-radius:16px;overflow:hidden;z-index:100;box-shadow:0 12px 32px #0007}
+#course-menu.course-menu button{color:#f1f7fb;background:#202f36;min-height:56px;display:flex;align-items:center;gap:14px;padding:14px 16px;width:100%;text-align:left;font-size:17px}
+#course-menu.course-menu button.selected,#course-menu.course-menu button:hover{background:#164b49;color:#f1f7fb}
+#course-menu.course-menu button>span{flex:1;min-width:0}
+#course-menu.course-menu button .icon:last-child{margin-left:0;color:#49c0f8}
