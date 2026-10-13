@@ -103,3 +103,6 @@ Usare il gufo verde già presente nel progetto su fondo scuro pieno, centrato e 
 
 ## Modalità Home a tutta altezza
 Riferimento iPhone: barra browser assente, molto spazio vuoto attorno alle tre tappe. In modalità standalone usare la stessa altezza dinamica con safe area, ma su schermi alti aumentare nodi, etichette, banner e pulsanti. Mantenere tutte le azioni nella schermata e il layout compatto sui telefoni bassi. Nessuna variazione ai progressi o alla navigazione desktop.
+
+## Margine superiore Home
+Dallo screenshot iPhone, abbassare header e banner di 20 px oltre la safe area in modalità standalone sui telefoni alti. Assorbire lo spazio nel percorso flessibile senza spostare la navigazione inferiore e senza aggiungere scroll.

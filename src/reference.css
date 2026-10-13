@@ -129,6 +129,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 #course-menu.course-menu button .icon:last-child{margin-left:0;color:#49c0f8}
 /* La Home offre più altezza: ingrandire i controlli senza introdurre scroll. */
 @media(max-width:700px) and (min-height:720px){
+ html[data-app-mode="standalone"] #app[data-screen="learn"] .workspace{padding-top:calc(env(safe-area-inset-top) + 20px)}
  html[data-app-mode="standalone"] #app[data-screen="learn"] .topbar{height:60px;min-height:60px;margin-bottom:12px}
  html[data-app-mode="standalone"] #app[data-screen="learn"] .unit-banner{height:84px;min-height:84px;padding:14px}
  html[data-app-mode="standalone"] #app[data-screen="learn"] .unit-banner h2{font-size:20px;line-height:24px}
