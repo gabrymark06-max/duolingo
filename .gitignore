@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env*
+.vercel/
+archivio/
+qa/*.png
+qa/rea-*.json
+qa/audio-decodifica.txt
+qa/audio-generazione.json
+qa/salva-*.py

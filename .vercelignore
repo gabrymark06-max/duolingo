@@ -1,0 +1,10 @@
+.git/
+.vercel/
+node_modules/
+dist/
+archivio/
+qa/
+docs/
+AVVIA-LINGO.cmd
+avvia.ps1
+DESIGN.md
