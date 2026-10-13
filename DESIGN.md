@@ -100,3 +100,6 @@ Screenshot con voce selezionata chiara e menu tagliato. Fissare i colori del men
 
 ## Icona Home iPhone
 Usare il gufo verde già presente nel progetto su fondo scuro pieno, centrato e con margine. Fornire PNG 180 px per Apple e 192/512 px per il manifest web. Nome breve Lingo e apertura standalone; nessuna modifica all'header o ai progressi. Riferimento: schermata Aggiungi a Home dell'utente, che mostra la lettera L al posto dell'icona.
+
+## Modalità Home a tutta altezza
+Riferimento iPhone: barra browser assente, molto spazio vuoto attorno alle tre tappe. In modalità standalone usare la stessa altezza dinamica con safe area, ma su schermi alti aumentare nodi, etichette, banner e pulsanti. Mantenere tutte le azioni nella schermata e il layout compatto sui telefoni bassi. Nessuna variazione ai progressi o alla navigazione desktop.

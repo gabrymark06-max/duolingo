@@ -127,3 +127,21 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 #course-menu.course-menu button.selected,#course-menu.course-menu button:hover{background:#164b49;color:#f1f7fb}
 #course-menu.course-menu button>span{flex:1;min-width:0}
 #course-menu.course-menu button .icon:last-child{margin-left:0;color:#49c0f8}
+/* La Home offre più altezza: ingrandire i controlli senza introdurre scroll. */
+@media(max-width:700px) and (min-height:720px){
+ html[data-app-mode="standalone"] #app[data-screen="learn"] .topbar{height:60px;min-height:60px;margin-bottom:12px}
+ html[data-app-mode="standalone"] #app[data-screen="learn"] .unit-banner{height:84px;min-height:84px;padding:14px}
+ html[data-app-mode="standalone"] #app[data-screen="learn"] .unit-banner h2{font-size:20px;line-height:24px}
+ html[data-app-mode="standalone"] #app[data-screen="learn"] .unit-overview{padding-top:14px}
+ html[data-app-mode="standalone"] #app[data-screen="learn"] .premium-path{min-height:194px;padding:50px 4px 34px}
+ html[data-app-mode="standalone"] #app[data-screen="learn"] .premium-stop:nth-child(n){width:clamp(72px,20vw,88px);height:122px}
+ html[data-app-mode="standalone"] #app[data-screen="learn"] .lesson-node{width:clamp(72px,20vw,88px);height:clamp(68px,19vw,84px)}
+ html[data-app-mode="standalone"] #app[data-screen="learn"] .lesson-node .reference-icon{width:46px;height:40px}
+ html[data-app-mode="standalone"] #app[data-screen="learn"] .node-ring{inset:-10px;width:calc(clamp(72px,20vw,88px) + 20px);height:calc(clamp(68px,19vw,84px) + 20px)}
+ html[data-app-mode="standalone"] #app[data-screen="learn"] .activity-label{top:96px;font-size:16px;line-height:22px}
+ html[data-app-mode="standalone"] #app[data-screen="learn"] .chapter-end{padding:16px 2px 12px;gap:7px}
+ html[data-app-mode="standalone"] #app[data-screen="learn"] .chapter-end h2{font-size:18px;line-height:24px}
+ html[data-app-mode="standalone"] #app[data-screen="learn"] .chapter-end .outline{min-height:50px;font-size:12px}
+ html[data-app-mode="standalone"] #app[data-screen="learn"] .chapter-controls{min-height:48px}
+ html[data-app-mode="standalone"] #app[data-screen="learn"] .chapter-controls .text-button{font-size:11px;min-height:48px}
+}

@@ -1,4 +1,8 @@
 import {nodeSessions} from './lesson-plan.js';
+const standaloneMode=window.matchMedia('(display-mode: standalone)');
+const updateAppMode=()=>{if(standaloneMode.matches||window.navigator.standalone)document.documentElement.dataset.appMode='standalone';};
+updateAppMode();
+standaloneMode.addEventListener('change',updateAppMode);
 import './rook-course.js';
 import {playEnglish,stopPronunciation} from './pronunciation.js';
 import './style.css';
