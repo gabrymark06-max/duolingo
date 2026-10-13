@@ -109,3 +109,6 @@ Dallo screenshot iPhone, abbassare header e banner di 20 px oltre la safe area i
 
 ## Shell mobile unica per tutte le sezioni
 Le cinque immagini mostrano safe area rispettata solo in Impara, header sotto l'orologio nelle altre sezioni e navigazione ad altezze diverse. Unificare tutte le viste mobile in una griglia alta 100dvh: workspace flessibile e navigazione inferiore come ultima riga stabile. Header fuori dall'area scorrevole, margine safe area su ogni vista, 20 px aggiuntivi in modalità Home. Solo il contenuto lungo scorre internamente. Conservare il percorso senza scroll e adattare anche le intestazioni delle lezioni alla safe area. Verificare passaggi fra tutte le cinque tab e contenuti lunghi.
+
+## Barra aderente al bordo inferiore
+Screenshot con spazio vuoto eccessivo sotto le icone. Fissare la barra al bordo inferiore del viewport in tutte le sezioni mobile e riservare esattamente la sua altezza nel workspace. Margine inferiore limitato a 34 px per il gesto Home; altezza controlli 64 px. Conservare intestazione protetta e scroll interno.
