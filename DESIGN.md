@@ -97,3 +97,6 @@ Riferimento: screenshot iPhone fornito, menu fuori bordo e verifica nascosta dal
 
 ## Correzione menu iPhone
 Screenshot con voce selezionata chiara e menu tagliato. Fissare i colori del menu senza dipendere dalle media query e posizionarlo rispetto al viewport visibile, con margini minimi. Ricalcolare alla variazione del visualViewport, anche in caso di zoom. Controllare 390 e 320 px, apertura e cambio corso. Conservare lo zoom accessibile e i progressi.
+
+## Icona Home iPhone
+Usare il gufo verde già presente nel progetto su fondo scuro pieno, centrato e con margine. Fornire PNG 180 px per Apple e 192/512 px per il manifest web. Nome breve Lingo e apertura standalone; nessuna modifica all'header o ai progressi. Riferimento: schermata Aggiungi a Home dell'utente, che mostra la lettera L al posto dell'icona.
