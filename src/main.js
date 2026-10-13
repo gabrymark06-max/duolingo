@@ -1,8 +1,21 @@
 import {nodeSessions} from './lesson-plan.js';
 const standaloneMode=window.matchMedia('(display-mode: standalone)');
-const updateAppMode=()=>{if(standaloneMode.matches||window.navigator.standalone)document.documentElement.dataset.appMode='standalone';};
+const updateAppMode=()=>{
+ const root=document.documentElement,standalone=standaloneMode.matches||window.navigator.standalone;
+ if(standalone)root.dataset.appMode='standalone';
+ const ios=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+ if(standalone&&ios&&window.innerWidth<=700){
+  const portrait=window.matchMedia('(orientation: portrait)').matches;
+  const screenHeight=portrait?Math.max(screen.width,screen.height):Math.min(screen.width,screen.height);
+  const height=Math.max(window.innerHeight,screenHeight);
+  if(height-window.innerHeight<=200){root.dataset.iosHome='true';root.style.setProperty('--home-screen-height',`${height}px`);return;}
+ }
+ delete root.dataset.iosHome;root.style.removeProperty('--home-screen-height');
+};
 updateAppMode();
 standaloneMode.addEventListener('change',updateAppMode);
+window.addEventListener('resize',updateAppMode);
+window.addEventListener('pageshow',updateAppMode);
 import './rook-course.js';
 import {playEnglish,stopPronunciation} from './pronunciation.js';
 import './style.css';

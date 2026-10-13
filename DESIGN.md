@@ -112,3 +112,6 @@ Le cinque immagini mostrano safe area rispettata solo in Impara, header sotto l'
 
 ## Barra aderente al bordo inferiore
 Screenshot con spazio vuoto eccessivo sotto le icone. Fissare la barra al bordo inferiore del viewport in tutte le sezioni mobile e riservare esattamente la sua altezza nel workspace. Margine inferiore limitato a 34 px per il gesto Home; altezza controlli 64 px. Conservare intestazione protetta e scroll interno.
+
+## Altezza completa in Home iOS
+La barra resta sollevata nello screenshot nonostante bottom:0 sia confermato nel CSS pubblico. Ipotesi: viewport standalone ridotto. In modalità Home iOS usare l'altezza orientata dello schermo e ancorare la navigazione al telaio assoluto, senza dipendere dal containing block dei fixed di Safari. Limitare il workaround a iOS standalone e differenze ragionevoli fra viewport e schermo; preservare Safari normale, zoom e desktop. Verificare con viewport ridotto simulato. Riferimento tecnico: https://bugs.webkit.org/show_bug.cgi?id=301994 (non prova della versione iOS del dispositivo).

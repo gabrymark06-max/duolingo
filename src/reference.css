@@ -161,4 +161,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
  .lesson-top{padding-top:calc(20px + env(safe-area-inset-top))}
  html[data-app-mode="standalone"] .lesson-top{padding-top:calc(40px + env(safe-area-inset-top))}
  .guide-dialog{padding-top:calc(32px + env(safe-area-inset-top))}
+ html[data-ios-home="true"] body:has(#app[data-screen]),html[data-ios-home="true"] #app[data-screen]{height:var(--home-screen-height,100dvh)}
+ html[data-ios-home="true"] #app[data-screen]{position:relative}
+ html[data-ios-home="true"] #app[data-screen] .mobile-nav{position:absolute;bottom:0}
 }
