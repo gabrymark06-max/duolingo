@@ -106,3 +106,6 @@ Riferimento iPhone: barra browser assente, molto spazio vuoto attorno alle tre t
 
 ## Margine superiore Home
 Dallo screenshot iPhone, abbassare header e banner di 20 px oltre la safe area in modalità standalone sui telefoni alti. Assorbire lo spazio nel percorso flessibile senza spostare la navigazione inferiore e senza aggiungere scroll.
+
+## Shell mobile unica per tutte le sezioni
+Le cinque immagini mostrano safe area rispettata solo in Impara, header sotto l'orologio nelle altre sezioni e navigazione ad altezze diverse. Unificare tutte le viste mobile in una griglia alta 100dvh: workspace flessibile e navigazione inferiore come ultima riga stabile. Header fuori dall'area scorrevole, margine safe area su ogni vista, 20 px aggiuntivi in modalità Home. Solo il contenuto lungo scorre internamente. Conservare il percorso senza scroll e adattare anche le intestazioni delle lezioni alla safe area. Verificare passaggi fra tutte le cinque tab e contenuti lunghi.
